@@ -25,14 +25,9 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
         {/* Links desktop */}
         <nav className={styles.links}>
           <Link to="/" className={`${styles.navLink} ${isActive('/') ? styles.navLinkActive : ''}`}>
-            Home
+            Catalogo
           </Link>
-          <Link to="/catalogo" className={`${styles.navLink} ${isActive('/catalogo') ? styles.navLinkActive : ''}`}>
-            Catálogo
-          </Link>
-          <Link to="/carrito" className={`${styles.navLink} ${isActive('/carrito') ? styles.navLinkActive : ''}`}>
-            Carrito
-          </Link>
+
         </nav>
 
         <button
