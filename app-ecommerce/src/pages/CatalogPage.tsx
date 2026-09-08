@@ -29,7 +29,7 @@ const searchClient = algoliasearch(
 const INDEX_MAIN = import.meta.env.VITE_ALGOLIA_INDEX_MAIN
 const INDEX_PRICE_ASC = import.meta.env.VITE_ALGOLIA_INDEX_PRICE_ASC
 const INDEX_PRICE_DESC = import.meta.env.VITE_ALGOLIA_INDEX_PRICE_DESC
-
+console.log('APP_ID:', import.meta.env.VITE_ALGOLIA_APP_ID)
 export const SORT_OPTIONS = [
   { label: 'Relevancia', value: INDEX_MAIN },
   { label: 'Precio: menor a mayor', value: INDEX_PRICE_ASC },
