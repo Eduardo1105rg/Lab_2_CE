@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]  # tu rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          cache-dependency-path: app-ecommerce/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: app-ecommerce
+        run: pnpm install
+
+      - name: Build
+        working-directory: app-ecommerce
+        env:
+          VITE_ALGOLIA_APP_ID: ${{ secrets.VITE_ALGOLIA_APP_ID }}
+          VITE_ALGOLIA_SEARCH_KEY: ${{ secrets.VITE_ALGOLIA_SEARCH_KEY }}
+          VITE_ALGOLIA_INDEX_MAIN: ${{ secrets.VITE_ALGOLIA_INDEX_MAIN }}
+          VITE_ALGOLIA_INDEX_PRICE_ASC: ${{ secrets.VITE_ALGOLIA_INDEX_PRICE_ASC }}
+          VITE_ALGOLIA_INDEX_PRICE_DESC: ${{ secrets.VITE_ALGOLIA_INDEX_PRICE_DESC }}
+        run: pnpm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: app-ecommerce/dist
