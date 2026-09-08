@@ -11,6 +11,11 @@ Los componentes de filtros y busqueda estan diseñados para facilitar la busqued
 Por otro lado, el componeten de paginacion se encuentra en la zona inferior del catalogo, al final de los productos, esto para que cuando el usuario termine de visualizar la pagina actual, pueda pasar facilmente a la siguiente pagina. Esta parte de paginacion solo muestra 3 recuadros para navegar esto con el fin de que no sea molesto ver todas las paginas disponibles, por lo que solo se muestra el recuadro de la primera pagina, el recuadro de la segunda y el recuadro de la ultima pagina disponible.
 
 ## Manejo de estados
-Cuando una busqueda mediante la barra de busqueda o filtros, no encuentre productos que coincidan, el programa no podra mostrar productos en pantalla. Por otro lado, la parte del recuadro de filtros, dejara deja de mostrar los filtros disponibles, esto debido a que los filtros disponibles se actualizan conforme los productos que queden, para que el usuario pueda delimitar mejor lo que desee, por lo tanto, cuando una busqueda  no arroje resultados, la interfaz quedara a como se muestra en la siguiente imagene.
+Cuando una busqueda mediante la barra de busqueda o filtros, no encuentre productos que coincidan, el programa no podra mostrar productos en pantalla. Por otro lado, la parte del recuadro de filtros, dejara deja de mostrar los filtros disponibles, esto debido a que los filtros disponibles se actualizan conforme los productos que queden, para que el usuario pueda delimitar mejor lo que desee, por lo tanto, cuando una busqueda  no arroje resultados, la interfaz quedara a como se muestra en la siguiente imagen.
 
 ![img](./Docs/images/IMG_Busqueda_Cero_Coincidencias.png)
+
+
+## Enlace al proyecto desplegado
+
+https://eduardo1105rg.github.io/Lab_2_CE/
